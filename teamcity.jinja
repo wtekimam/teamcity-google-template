@@ -67,7 +67,7 @@ resources:
 {%- if properties['network'] %}
     network: {{ properties['network'] }}
 {%- else %}
-    network: $(ref.network.name)
+    network: autoCreateSubnetwork
 {%- endif %}
     subnetwork: {{ properties['subnetwork'] }}
     size: {{ properties['installationSize'] }}
